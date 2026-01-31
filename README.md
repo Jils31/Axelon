@@ -2,7 +2,7 @@
 
 A production-grade backend system for managing fleet vehicles, drivers, trips, and maintenance operations.
 
-## 🚀 Features
+## Features
 
 ### Core Functionality
 - **User Management**: JWT-based authentication with role-based access control (Admin, Fleet Manager, Driver)
@@ -21,7 +21,7 @@ A production-grade backend system for managing fleet vehicles, drivers, trips, a
 - **Rate Limiting**: 100 requests per minute per IP
 - **Pagination & Filtering**: All list endpoints support pagination, sorting, and filtering
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 - **Backend**: Spring Boot 3.2.x
 - **Database**: PostgreSQL
@@ -32,14 +32,14 @@ A production-grade backend system for managing fleet vehicles, drivers, trips, a
 - **Email**: Spring Mail (SMTP)
 - **External API**: WebClient for HTTP requests
 
-## 📋 Prerequisites
+## Prerequisites
 
 - JDK 17 or higher
 - Maven 3.6+
 - PostgreSQL 12+
 - SMTP server (Gmail recommended for testing)
 
-## ⚙️ Installation & Setup
+## Installation & Setup
 
 ### 1. Clone Repository
 ```bash
@@ -78,7 +78,7 @@ mvn spring-boot:run
 
 Application starts on: `http://localhost:8080`
 
-## 📚 API Documentation
+## API Documentation
 
 **Swagger UI**: http://localhost:8080/swagger-ui.html
 
@@ -128,7 +128,7 @@ Application starts on: `http://localhost:8080`
 - `POST /api/currency/convert` - Convert currency
 - `GET /api/currency/rates/{baseCurrency}` - Get exchange rates
 
-## 🗂️ Project Structure
+## Project Structure
 
 ```
 src/main/java/com/fleetmanagement/fleetsystem/
@@ -142,7 +142,7 @@ src/main/java/com/fleetmanagement/fleetsystem/
 └── util/           # Utility classes
 ```
 
-## 🧪 Testing
+## Testing
 
 ### Sample Test Flow
 1. Register user: `POST /api/auth/register`
@@ -156,7 +156,7 @@ src/main/java/com/fleetmanagement/fleetsystem/
 ### Postman Collection
 Import the API collection from Swagger for easy testing.
 
-## 📊 Database Schema
+## Database Schema
 
 ### Key Tables
 - `users` - User accounts
@@ -173,7 +173,7 @@ Import the API collection from Swagger for easy testing.
 - Maintenance → Vehicle (Many-to-One)
 - Document → Vehicle (Many-to-One)
 
-## 🔒 Security
+## Security
 
 - Password encryption with BCrypt
 - JWT token-based authentication
@@ -182,14 +182,14 @@ Import the API collection from Swagger for easy testing.
 - Input validation on all endpoints
 - File upload size limits (5MB)
 
-## 📧 Email Configuration
+## Email Configuration
 
 For Gmail:
 1. Enable 2-Step Verification
 2. Generate App Password
 3. Use app password in `application.properties`
 
-## 🚀 Deployment
+## Deployment
 
 ### Environment Variables
 Set these in production:
@@ -205,18 +205,10 @@ COPY target/*.jar app.jar
 ENTRYPOINT ["java","-jar","/app.jar"]
 ```
 
-## 📝 Future Enhancements
+## Future Enhancements
 
 - Real-time GPS tracking integration
 - Mobile app support
 - Advanced reporting with charts
 - Multi-tenant support
 - WebSocket for live updates
-
-## 👨‍💻 Developer
-
-Created as a Backend Engineering project using Spring Boot.
-
-## 📄 License
-
-MIT License
